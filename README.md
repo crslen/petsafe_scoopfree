@@ -1,5 +1,5 @@
 # PetSafe Scoopfree - Python API
-Connect and control a PetSafe Smart Feed device using the PetSafe-Scoopfree API.
+Connect and control a PetSafe Scoopfree device using the PetSafe-Scoopfree API.
 
 > **BREAKING CHANGE:** Version 2.0 uses the new PetSafe API.
 > You will need to request new tokens.
@@ -13,7 +13,7 @@ If installing from source code,
 `python setup.py install`
 
 ## Login tokens
-You **must** use tokens to interact with the PetSafe Smart-Feed API.  
+You **must** use tokens to interact with the PetSafe Scoopfree API.  
 There are two methods to retrieve tokens:
 
 #### Get tokens using command line
@@ -53,7 +53,7 @@ client = sf.PetSafeClient(email="email@example.com",
                        access_token="YOUR_ACCESS_TOKEN")
 devices = sf.devices.get_scoopers(client)
 
-# print all feeders
+# print all devices
 for device in devices:
     print(device)
 
@@ -66,9 +66,9 @@ client = sf.PetSafeClient(email="email@example.com",
                        id_token="YOUR_ID_TOKEN",
                        refresh_token="YOUR_REFRESH_TOKEN",
                        access_token="YOUR_ACCESS_TOKEN")
-devices = sf.devices.get_feeders(client)
+devices = sf.devices.get_scoopers(client)
 
-# get the first feeder
+# get the first scooper
 scooper = devices[0]
 scooper.rake_now()
 
@@ -83,7 +83,7 @@ client = sf.PetSafeClient(email="email@example.com",
                        access_token="YOUR_ACCESS_TOKEN")
 devices = sf.devices.get_scoopers(client)
 
-# get the first feeder
+# get the first scooper
 scooper = devices[0]
 scooper.reset()
 
@@ -98,7 +98,7 @@ client = sf.PetSafeClient(email="email@example.com",
                        access_token="YOUR_ACCESS_TOKEN")
 devices = sf.devices.get_scoopers(client)
 
-# get the first feeder
+# get the first scooper
 scooper = devices[0]
 scooper.modify_timer(amount=25)
 
