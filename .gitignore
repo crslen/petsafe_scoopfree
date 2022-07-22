@@ -1,2 +1,7 @@
 examples/petsafe.py
 HASS/scoopfree_device.py
+petsafe_scoopfree_crslen.egg-info/*
+petsafe_scoopfree.egg-info/*
+dist/*
+HASS/*
+pyproject.toml
