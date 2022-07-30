@@ -128,22 +128,22 @@ class DeviceScoopfree:
 
     @property
     def api_name(self):
-        """The feeder's thing_name from the API."""
+        """The scooper's thing_name from the API."""
         return self.data["thingName"]
 
     @property
     def api_path(self):
-        """The feeder's path on the API."""
+        """The scooper's path on the API."""
         return "/scoopfree/product/product/" + self.api_name + "/"
 
     @property
     def id(self):
-        """The feeder's ID."""
+        """The scooper's ID."""
         return self.data["id"]
 
     @property
     def friendly_name(self):
-        """The feeder's display name."""
+        """The scooper's display name."""
         return self.data["settings"]["friendly_name"]
 
     @friendly_name.setter
